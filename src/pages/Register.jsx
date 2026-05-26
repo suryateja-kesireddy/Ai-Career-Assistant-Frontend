@@ -19,7 +19,7 @@ function Register() {
     try {
 
       await axios.post(
-        "http://localhost:8080/api/auth/register",
+        "https://ai-career-assistant-backend-b6ux.onrender.com/api/auth/register",
         {
           name,
           email,
@@ -32,6 +32,8 @@ function Register() {
       navigate("/");
 
     } catch (error) {
+
+      console.log(error);
 
       alert("Registration Failed");
     }

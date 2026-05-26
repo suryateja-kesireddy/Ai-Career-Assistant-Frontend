@@ -38,15 +38,15 @@ const Dashboard = () => {
     const token = localStorage.getItem("token");
 
     const response = await axios.post(
-      "http://localhost:8080/api/resume/upload",
-      formData,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
+  "https://ai-career-assistant-backend-b6ux.onrender.com/api/resume/upload",
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
 
     console.log(response.data);
 

@@ -17,7 +17,7 @@ function Login() {
     try {
 
       const response = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "https://ai-career-assistant-backend-b6ux.onrender.com/api/auth/login",
         {
           email,
           password,
@@ -29,9 +29,13 @@ function Login() {
         response.data.token
       );
 
+      alert("Login Successful");
+
       navigate("/dashboard");
 
     } catch (error) {
+
+      console.log(error);
 
       alert("Login Failed");
     }
